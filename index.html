@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hi there, I know you probably don’t care at all, but I just wanted to say that I’ll be deactivating this account. I’ve prepared a short message for you, and reading it would mean the world to me. You can trust me with this one</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            background-image: url('https://i.imgur.com/0iq8L90.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            background-color: transparent;
+            color: black;
+            width: 280px;
+            height: 100px;
+            font-size: 20px;
+            border-radius: 300px;
+        }
+
+        /* Style for the custom modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: pink;
+            border-radius: 10px;
+            padding: 20px;
+            width: 50%;
+            max-width: 500px;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* No border and no outline for the "Click Me" button */
+        .modal-button {
+            background-color: transparent;
+            color: black;
+            font-size: 16px; /* Reduced font size */
+            border-radius: 20px;
+            padding: 8px 20px; /* Adjusted padding */
+            cursor: pointer;
+            margin-top: 15px;
+            text-decoration: none;
+            border: none;  /* Remove border */
+            outline: none; /* Remove outline */
+            width: auto; /* Automatically adjust to content */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showModal()">Click mo'to Ma'am sungit</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalText"></p>
+            <button class="modal-button" onclick="showNextMessage()">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        let modal = document.getElementById("myModal");
+        let modalText = document.getElementById("modalText");
+
+        let messages = [
+            "Hello there, Maam Sungit",
+            "I just wanted to say Im sorry if I ever made you feel uncomfortable or creeped you out.",
+            "im not sure if I did, but I guess its better to apologize just in case.",
+            "Anyway, the main reason Im sending this message is to say thank you. Not even the word 'thank you' can fully describe how grateful I am that someone like me could admire someone like you.",
+            "Just admiring you from afar made me realize that Im not even worthy of admiring someone like you.",
+            "That's why I wanted to be the best version of myself.",
+            "Because of you, I started changing myself for the better, why I started taking care of myself more, and why Im trying my best in school.",
+            "I'm not the best version of myself yet, but I'm far better than I was three months ago, and it's because of you.",
+            "Still, I'm such a loser. I can't even show my true self and am still hiding behind my dummy account.",
+            "But I like it this way, even if it means keeping my feelings hidden. And for now, that feels like enough.",
+            "I just want you to know that I'll keep working on improving myself, all for you, so one day I can stand beside you as your equal.",
+            "Why do I like you? I didnt fall for you Irish because youre pretty though you definitely are. But its so much more than that. I fell for the way you laugh, the kindness in your eyes, and how your presence makes everything feel a little lighter. Its the way you make me want to be a better person. My heart trembles everytime I saw you. even you do have flaws I never see them. You shines so perfectly, There isnt a day that goes by where I dont think of you.",
+            "But I know the fact that just because we like someone, it doesnt always mean they should like us back. Feelings can be complicated, and sometimes, even if we care about someone, it doesnt mean the feelings are always mutual.",
+            "And thats okay. I just wanted to let you know that no matter what, I respect you and your feelings, and I dont expect anything in return.",
+            "If you made it this far, just react to any of my messages so I know you read this."
+        ];
+
+        let index = 0;
+
+        function showModal() {
+            modal.style.display = "flex"; 
+            showNextMessage(); // Show the first message
+        }
+
+        function showNextMessage() {
+            if (index < messages.length) {
+                modalText.textContent = messages[index];
+                index++;
+            } else {
+                closeModal();
+            }
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+            index = 0; // Reset the message index when the modal is closed
+        }
+    </script>
+</body>
+</html>
